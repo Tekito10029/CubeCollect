@@ -2,22 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Title : MonoBehaviour
+public class ScenJump : MonoBehaviour
 {
 
-	
+
 	void Start()
 	{
 
 	}
 
-	
+
 	void Update()
 	{
-		if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("space") || Input.GetButtonDown("Action1") || Input.GetButtonDown("Jump")) //マウス左クリック、スペースキー、Aボタン、ジャンプボタンを押した場合
+		if (Input.GetMouseButtonDown(0))    // 左マウスボタンをクリックしたら
 		{
-			SceneManager.LoadScene("some_sensei");
+			SceneManager.LoadScene("GameScene");    // GameSceneに移動
 		}
-
 	}
 }
